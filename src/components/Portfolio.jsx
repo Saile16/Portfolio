@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import MotionWrap from "../wrapper/MotionWrap";
-
 import Mibolsillo from "../assets/mibolsillo.png";
 import Ecommerce from "../assets/ecommerce.png";
 import Projects from "../assets/projects.png";
@@ -37,7 +36,7 @@ const Portfolio = () => {
     },
     {
       title: "BankWeb",
-      description: "",
+      description: "t",
       projectLink: "https://cute-zabaione-11d837.netlify.app/",
       githubLink: "https://github.com/Saile16/BankWeb",
       imgUrl: Bank,
