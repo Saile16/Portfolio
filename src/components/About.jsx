@@ -1,14 +1,15 @@
 import { BiDownload } from "react-icons/bi";
 import ImageProfile from "../assets/hero-profile.jpg";
+import LucanoCV from "../assets/alexanderlucano.pdf";
 const About = () => {
   return (
     <section className="about section" id="about">
       <h2 className="section__title">About Me</h2>
-      <span className="section__subtitle">
+      <span className="section__subtitle container">
         Hello, my name is Alexander. Technology was always something that caught
         my attention, I started being self-taught until I finished a degree in
-        Systems Engineering. And now I am constantly learning and growing with
-        new technologies.
+        Systems Engineering, and now I am constantly learning and growing with
+        the new technologies.
       </span>
 
       <div className="about__container container grid">
@@ -46,7 +47,7 @@ const About = () => {
           </div>
 
           <div className="about__buttons">
-            <a download="" href="" className="button button--flex">
+            <a download="" href={LucanoCV} className="button button--flex">
               Download CV
               <BiDownload className="button__icon" />
             </a>

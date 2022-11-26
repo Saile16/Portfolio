@@ -1,4 +1,3 @@
-import React from "react";
 import {
   AiOutlineHome,
   AiOutlineUser,
@@ -6,7 +5,7 @@ import {
   AiOutlineClose,
 } from "react-icons/ai";
 import { FiMoon } from "react-icons/fi";
-import { BsBriefcase } from "react-icons/bs";
+import { BsBriefcase, BsSun } from "react-icons/bs";
 import { BiImage } from "react-icons/bi";
 import { GrContact } from "react-icons/gr";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -14,6 +13,18 @@ import { useState } from "react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const [theme, setTheme] = useState("light");
+
+  const handleDarkTheme = () => {
+    if (document.body.classList.contains("dark")) {
+      document.body.classList.remove("dark");
+      setTheme("light");
+    } else {
+      document.body.classList.add("dark");
+      setTheme("dark");
+    }
+  };
 
   return (
     <header className="header" id="header">
@@ -94,7 +105,20 @@ const Header = () => {
         </div>
         <div className="nav__btns">
           {/* Theme change Button */}
-          <FiMoon className="change-theme" id="theme-button" />
+          {theme === "light" ? (
+            <FiMoon
+              onClick={handleDarkTheme}
+              className="change-theme"
+              id="theme-button"
+            />
+          ) : (
+            <BsSun
+              onClick={handleDarkTheme}
+              className="change-theme"
+              id="theme-button"
+            />
+          )}
+
           <div className="nav__toggle" id="nav-toggle">
             <GiHamburgerMenu onClick={() => setMenuOpen(!menuOpen)} />
           </div>

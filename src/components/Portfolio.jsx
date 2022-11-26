@@ -19,11 +19,11 @@ const Portfolio = () => {
     {
       title: "Ecommerce",
       description:
-        "I developed an ecommerce web page as practice, using django in the backend and react in the frontend, reactboostrap for the styles, registration functionality, login, search, roles as user and administrator.",
+        "I developed an ecommerce web page as practice, using django in the backend and react in the frontend, reactboostrap for the styles, registration functionality, login, search, roles as user and administrator and more.",
       projectLink: "https://github.com/Saile16/Ecomshop/tree/main",
       githubLink: "https://github.com/Saile16/Ecomshop/tree/main",
       imgUrl: Ecommerce,
-      tags: ["Django, React, Full Stack"],
+      tags: ["Django, React, Redux"],
     },
     {
       title: "MERN Project",
@@ -32,15 +32,16 @@ const Portfolio = () => {
       projectLink: "https://shiny-sprite-98d398.netlify.app/proyectos",
       githubLink: "https://github.com/Saile16/BugTracker_MERN_frontend",
       imgUrl: Projects,
-      tags: ["MERN, Full Stack"],
+      tags: ["MERN, Socket.io, Context API"],
     },
     {
       title: "BankWeb",
-      description: "t",
+      description:
+        "Part of my learning path, I made the layout of this modern website, using TailwindCss, being mobile first and adaptable to all screens.",
       projectLink: "https://cute-zabaione-11d837.netlify.app/",
       githubLink: "https://github.com/Saile16/BankWeb",
       imgUrl: Bank,
-      tags: ["Tailwind Css, HTML"],
+      tags: ["TailwindCss, HTML"],
     },
   ]);
   return (

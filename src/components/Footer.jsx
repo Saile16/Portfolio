@@ -35,10 +35,15 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/in/alrlucano/"
               className="footer__social"
+              target="_blank"
             >
               <AiOutlineLinkedin />
             </a>
-            <a href="https://github.com/Saile16" className="footer__social">
+            <a
+              href="https://github.com/Saile16"
+              className="footer__social"
+              target="_blank"
+            >
               <FiGithub />
             </a>
             <a href="" className="footer__social"></a>

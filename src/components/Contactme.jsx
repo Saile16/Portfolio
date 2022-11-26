@@ -1,7 +1,30 @@
 import { BsTelephone, BsEnvelope } from "react-icons/bs";
 import { BiMap, BiSend } from "react-icons/bi";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 const Contactme = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        `${import.meta.env.VITE_SERVICE}`,
+        `${import.meta.env.VITE_TEMPLATE_EMAIL}`,
+        e.target,
+        `${import.meta.env.VITE_API_KEY}`
+      )
+      .then((res) => console.log(res))
+      .catch((error) => console.log(error));
+
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
   return (
     <section className="contact section" id="contact">
       <h2 className="section__title">Contact Me</h2>
@@ -34,33 +57,46 @@ const Contactme = () => {
           </div>
         </div>
 
-        <form action="" className="contact__form grid">
+        <form className="contact__form grid" onSubmit={sendEmail}>
           <div className="contact__inputs grid">
             <div className="contact__content">
               <label className="contact__label">Name</label>
-              <input type="text" className="contact__input" />
+              <input
+                type="text"
+                className="contact__input"
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </div>
 
             <div className="contact__content">
               <label className="contact__label">Email</label>
-              <input type="email" className="contact__input" />
+              <input
+                type="email"
+                className="contact__input"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
           </div>
 
           <div className="contact__content">
-            <label className="contact__label">Project</label>
-            <input type="text" className="contact__input" />
-          </div>
-
-          <div className="contact__content">
             <label className="contact__label">Message</label>
-            <textarea rows="7" className="contact__input"></textarea>
+            <textarea
+              rows="7"
+              className="contact__input"
+              name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
           </div>
 
           <div>
-            <a href="#" className="button button--flex">
+            <button className="button button--flex">
               Send Message <BiSend className="button__icon" />
-            </a>
+            </button>
           </div>
         </form>
       </div>

@@ -7,6 +7,7 @@ import python from "../assets/tech/python.png";
 import css from "../assets/tech/css.png";
 import django from "../assets/tech/django.png";
 import express from "../assets/tech/express.png";
+import tailwind from "../assets/tech/tailwind.png";
 
 export default {
   git,
@@ -18,4 +19,5 @@ export default {
   css,
   django,
   express,
+  tailwind,
 };
