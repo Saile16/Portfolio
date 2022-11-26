@@ -3,7 +3,7 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import MotionWrap from "../wrapper/MotionWrap";
 import Mibolsillo from "../assets/mibolsillo.png";
 import Ecommerce from "../assets/ecommerce.png";
-import Projects from "../assets/projects.png";
+import Projects from "../assets/mernprojects.png";
 import Bank from "../assets/bank.png";
 const Portfolio = () => {
   const [filterWork, setFilterWork] = useState([
